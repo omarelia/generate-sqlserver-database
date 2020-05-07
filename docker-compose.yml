@@ -6,5 +6,4 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    command: ["python", "test.py"]
-
+    command: ["python", "generate.py"]

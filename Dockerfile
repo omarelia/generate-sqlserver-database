@@ -8,4 +8,4 @@ RUN pip install python-dotenv
 COPY src/. .
 
 ### CMD ["yarn", "start"] ###
-CMD ["python", "test.py"]
+CMD ["python", "generate.py"]
