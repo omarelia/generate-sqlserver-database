@@ -5,8 +5,11 @@ import logging
 import logging.config
 import pyodbc
 
-logging.basicConfig(filename='/dist/logs/generate.log', level=logging.DEBUG)
-logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+
+logging.basicConfig(filename='/dist/logs/generate.log', level=logging.DEBUG,
+                    format='%(asctime)s : %(levelname)s : %(message)s', 
+                    datefmt='%d/%m/%Y %I:%M:%S', 
+                    filemode='w')
 
 logging.info('Hola')
 
@@ -14,6 +17,7 @@ logging.info('Hola')
 file=open('salida.txt','r')
 
 ### Tampoco que me tome el formato (sigo investigando), ni porque graba tantos logs (son solo 8 registros)
+### YA LO SOLUCIONÉ !!! (lineas 9 a 12)
 for line in file:
     logging.debug('El registro se procesó correctamente')
 
