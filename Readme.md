@@ -31,7 +31,7 @@ $ cd generate-sqlserver-database
 
 ```
 
-### 3. Changes values in .env
+### 3. The environment file is configured, according to the following orders
 
 '''
 
@@ -39,7 +39,7 @@ $ cp .env.example .env
 
 '''
 
-In the variable called 'url', this is where the data source url will be placed
+This is where the variable called 'url' is defined, where the URL of the data source will be located
 
 ### 4. Run using docker-compose
 

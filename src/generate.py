@@ -1,48 +1,20 @@
 import urllib.request, json
 import settings
 import os
+import logging
+import logging.config
+import pyodbc
 
-url = os.getenv("URL_DATA")
+logging.basicConfig(filename='/dist/logs/generate.log', level=logging.DEBUG)
+logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 
-response = urllib.request.urlopen(url)
+logging.info('Hola')
 
-data = json.loads(response.read())
+### No pude hacer que me tome el 'salida.txt' del directorio "files"
+file=open('salida.txt','r')
 
-total_sueldos = 0
+### Tampoco que me tome el formato (sigo investigando), ni porque graba tantos logs (son solo 8 registros)
+for line in file:
+    logging.debug('El registro se procesó correctamente')
 
-nombre_persona = []
-sueldo_persona = []
-
-meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo']
-sueldos_mensuales = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-
-for archivo in data['archivos']:
-    print('Nombre: ', archivo['nombre'])
-    print('Mes: ', archivo['mes'])
-    print('Sueldo: ', archivo['sueldo'])
-    print('')
-
-    total_sueldos += int(archivo['sueldo'])
-    sueldos_mensuales[meses.index(archivo['mes'])] += int(archivo['sueldo'])
-
-    if archivo['nombre'] not in nombre_persona:
-        nombre_persona.append(archivo['nombre'])
-        sueldo_persona.append(int(archivo['sueldo']))
-    else:
-        sueldo_persona[nombre_persona.index(archivo['nombre'])] += int(archivo['sueldo'])
-
-for nombre in nombre_persona:
-    print('Sueldo total de ', nombre, ': ', sueldo_persona[nombre_persona.index(nombre)])    
-print('')
-
-for mes in meses:
-    print('Sueldos totales del mes de ' + mes +': ', sueldos_mensuales[meses.index(mes)])
-print('')
-
-print('Total de sueldos:', total_sueldos)
-print('')
-
-sueldo_promedio = total_sueldos / len(archivo)
-
-print('Sueldo promedio:', sueldo_promedio)
-print('')
+logging.info('Hasta luego')

@@ -7,3 +7,13 @@ services:
       context: .
       dockerfile: Dockerfile
     command: ["python", "generate.py"]
+    volumes:
+      - ./logs:/dist/logs
+
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    environment:
+      - SA_PASSWORD=Passw0rd
+      - ACCEPT_EULA=Y
+    ports:
+      - "5434:1433"
