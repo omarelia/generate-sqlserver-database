@@ -1,10 +1,11 @@
-15/05/2020 03:08:25 : INFO : Hola
-15/05/2020 03:08:25 : DEBUG : El registro se procesó correctamente
-15/05/2020 03:08:25 : DEBUG : El registro se procesó correctamente
-15/05/2020 03:08:25 : DEBUG : El registro se procesó correctamente
-15/05/2020 03:08:25 : DEBUG : El registro se procesó correctamente
-15/05/2020 03:08:25 : DEBUG : El registro se procesó correctamente
-15/05/2020 03:08:25 : DEBUG : El registro se procesó correctamente
-15/05/2020 03:08:25 : DEBUG : El registro se procesó correctamente
-15/05/2020 03:08:25 : DEBUG : El registro se procesó correctamente
-15/05/2020 03:08:25 : INFO : Hasta luego
+20/05/2020 01:40:01 : INFO : Hola
+20/05/2020 01:40:01 : DEBUG : Ocurrió un error al conectar a SQL Server: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 17 for SQL Server' : file not found (0) (SQLDriverConnect)")
+20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
+20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
+20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
+20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
+20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
+20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
+20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
+20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
+20/05/2020 01:40:01 : INFO : Hasta luego

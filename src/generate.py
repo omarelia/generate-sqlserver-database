@@ -13,12 +13,37 @@ logging.basicConfig(filename='/dist/logs/generate.log', level=logging.DEBUG,
 
 logging.info('Hola')
 
-### No pude hacer que me tome el 'salida.txt' del directorio "files"
 file=open('salida.txt','r')
 
-### Tampoco que me tome el formato (sigo investigando), ni porque graba tantos logs (son solo 8 registros)
-### YA LO SOLUCIONÉ !!! (lineas 9 a 12)
+'''
+CREATE TABLE IF NOT EXISTS salida(
+	id bigint identity(1,1) primary key,	
+    legajo INT(5) NOT NULL,	
+	apellidoNombre VARCHAR(255) NOT NULL,
+	actMinjus VARCHAR(255) NOT NULL,
+	actSueld VARCHAR(255) NOT NULL,
+	nueMinjus VARCHAR(255) NOT NULL,
+	nueSueld VARCHAR(255) NOT NULL,
+	difMinjus INT(9) NOT NULL,
+	difSueld INT(9) NOT NULL,
+);
+'''
+
+serverName='localhost'
+dbName='Prueba'
+user='sa'
+psw='Pass@word'
+
+
+try:
+    conexion = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' +
+                              serverName+';DATABASE='+dbName+';UID='+user+';PWD=' + psw)
+    logging.debug('Conexión exitosa a SQL Server')
+except Exception as e:
+    logging.debug('Ocurrió un error al conectar a SQL Server: ' + str(e))
+
 for line in file:
     logging.debug('El registro se procesó correctamente')
+
 
 logging.info('Hasta luego')

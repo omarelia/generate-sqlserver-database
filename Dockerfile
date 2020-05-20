@@ -13,6 +13,7 @@ RUN pip install python-dotenv
 RUN pip install pyodbc
 
 COPY src/. .
+COPY ./files/. .
 
 ### CMD ["yarn", "start"] ###
 ### CMD ["python", "generate.py"]
