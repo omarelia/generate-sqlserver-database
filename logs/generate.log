@@ -1,11 +1,19 @@
-20/05/2020 01:40:01 : INFO : Hola
-20/05/2020 01:40:01 : DEBUG : Ocurrió un error al conectar a SQL Server: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 17 for SQL Server' : file not found (0) (SQLDriverConnect)")
-20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
-20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
-20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
-20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
-20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
-20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
-20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
-20/05/2020 01:40:01 : DEBUG : El registro se procesó correctamente
-20/05/2020 01:40:01 : INFO : Hasta luego
+Sat, 23 May 2020 00:52:28 : DEBUG : Abro el archivo salida.txt
+Sat, 23 May 2020 00:52:28 : INFO : Inicio
+Sat, 23 May 2020 00:52:28 : DEBUG : Ocurrió un error al conectar a SQL Server: name 'serverName' is not defined
+Sat, 23 May 2020 00:52:28 : DEBUG : El registro se procesó correctamente: 12345;asdfghgfdsaqwertyhnbvcxzsdc;01/01/01;02/01/02;01/01/01;09/01/02;000000001;000000000
+
+Sat, 23 May 2020 00:52:28 : DEBUG : El registro se procesó correctamente: 12354;asdfghgfdsaqwertyhnbvcxzsdc;01/01/01;02/01/02;01/01/01;08/01/02;000000002;000000000
+
+Sat, 23 May 2020 00:52:28 : DEBUG : El registro se procesó correctamente: 12367;asdfghgfdsaqwertyhnbvcxzsdc;01/01/01;02/01/02;01/01/01;07/01/02;000000003;000000000
+
+Sat, 23 May 2020 00:52:28 : DEBUG : El registro se procesó correctamente: 12378;asdfghgfdsaqwertyhnbvcxzsdc;01/01/01;02/01/02;01/01/01;06/01/02;000000004;000000000
+
+Sat, 23 May 2020 00:52:28 : DEBUG : El registro se procesó correctamente: 12389;asdfghgfdsaqwertyhnbvcxzsdc;01/01/01;02/01/02;01/01/01;05/01/02;000000005;000000000
+
+Sat, 23 May 2020 00:52:28 : DEBUG : El registro se procesó correctamente: 12312;asdfghgfdsaqwertyhnbvcxzsdc;01/01/01;02/01/02;01/01/01;04/01/02;000000006;000000000
+
+Sat, 23 May 2020 00:52:28 : DEBUG : El registro se procesó correctamente: 12323;asdfghgfdsaqwertyhnbvcxzsdc;01/01/01;02/01/02;01/01/01;03/01/02;000000007;000000000
+
+Sat, 23 May 2020 00:52:28 : DEBUG : El registro se procesó correctamente: 12334;asdfghgfdsaqwertyhnbvcxzsdc;01/01/01;02/01/02;01/01/01;02/01/02;000000008;000000000
+Sat, 23 May 2020 00:52:28 : INFO : Salida
