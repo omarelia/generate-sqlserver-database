@@ -24,18 +24,19 @@ logging.basicConfig(filename='/dist/logs/generate.log', level=logging.DEBUG,
 
 #logging.config.fileConfig('logging.conf')
 
+logging.config.listen(5434)
+
 logger=logging.getLogger(__name__)
 
 file=open('salida.txt','r')
 logger.debug('Abro el archivo salida.txt')
 
 ### Pasé estos parámetros a .env
-'''
-serverName='localhost'
-dbName='Prueba'
+serverName='sqldata1'
+dbName='prueba'
 user='sa'
 psw='Pass@word'
-'''
+
 
 logger.info('Inicio')
 
@@ -46,6 +47,8 @@ try:
 except Exception as e:
     logging.debug('Ocurrió un error al conectar a SQL Server: ' + str(e))
 #    exit()
+
+### ConnectionString=Server=sqldata_1;Database=prueba;User=sa;Password=Pass@word
 
 
 '''CREATE TABLE IF NOT EXISTS salida(
