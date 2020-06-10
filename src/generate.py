@@ -24,7 +24,7 @@ logging.basicConfig(filename='/dist/logs/generate.log', level=logging.DEBUG,
 
 #logging.config.fileConfig('logging.conf')
 
-logging.config.listen(5434)
+#logging.config.listen(1433)
 
 logger=logging.getLogger(__name__)
 
@@ -32,17 +32,18 @@ file=open('salida.txt','r')
 logger.debug('Abro el archivo salida.txt')
 
 ### Pasé estos parámetros a .env
-serverName='sqldata1'
-dbName='prueba'
-user='sa'
-psw='Pass@word'
+SERVERNAME='sqldata1'
+DBNAME='database'
+USER='sa'
+PSW='Passw0rd'
+HOST='172.21.0.3'
 
 
 logger.info('Inicio')
 
 try:
     conexion = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' +
-                              serverName+';DATABASE='+dbName+';UID='+user+';PWD=' + psw)
+                              HOST+';DATABASE='+DBNAME+';UID='+USER+';PWD=' + PSW)
     logging.debug('Conexión exitosa a SQL Server')
 except Exception as e:
     logging.debug('Ocurrió un error al conectar a SQL Server: ' + str(e))

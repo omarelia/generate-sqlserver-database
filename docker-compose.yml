@@ -1,4 +1,4 @@
-version: "3.5"
+version: "3.7"
 
 services:
   python37:
@@ -14,17 +14,17 @@ services:
   
   app:
     build:
-      context: ./src
-      dockerfile: ../Dockerfile
-    env_file: ./src/.env
+      context: .
+      dockerfile: Dockerfile
+    env_file: src/.env
     depends_on: 
       - sqldata
       
   sqldata:
     image: mcr.microsoft.com/mssql/server:2017-latest
-    container_name: BASE
-    entrypoint: /opt/mssql/bin/nonroot_msg.sh
-    env_file: ./src/.env
+###    container_name: BASE
+###    entrypoint: /opt/mssql/bin/nonroot_msg.sh
+    env_file: src/.env
     environment:
       - SA_PASSWORD=Passw0rd
       - ACCEPT_EULA=Y
