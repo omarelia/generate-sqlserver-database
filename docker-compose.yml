@@ -1,40 +1,41 @@
 version: "3.7"
 
 services:
-  python37:
-    restart: always
+  app:
+    restart: unless-stopped
+    container_name: app_python37
     build: 
       context: .
       dockerfile: Dockerfile
     env_file: src/.env
-    command: ["python", "generate.py"]
+###    command: ["python", "generate.py"]
+    command: tail -F anything
     volumes:
       - ./logs:/dist/logs
+    
+    networks:
+        - frontend
+        - backend
 
-  
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    env_file: src/.env
-    depends_on: 
-      - sqldata
+    depends_on:
+        - db  
       
-  sqldata:
+  db:
+    container_name: data_sqlserver
     image: mcr.microsoft.com/mssql/server:2017-latest
-###    container_name: BASE
-###    entrypoint: /opt/mssql/bin/nonroot_msg.sh
     env_file: src/.env
     environment:
       - SA_PASSWORD=Passw0rd
       - ACCEPT_EULA=Y
-    ports:
-      - "5434:1433"
 
+    networks:
+      - backend
 volumes: 
     db:
 
 networks:
-  default:
-    external:
-      name: database
+    frontend:
+        driver: bridge
+
+    backend: 
+        driver: bridge
