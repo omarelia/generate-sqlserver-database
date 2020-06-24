@@ -35,7 +35,7 @@ $ cd generate-sqlserver-database
 
 '''
 
-$ cp .env.example .env
+$ cp src/.env.example src/.env
 
 '''
 
